@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-
+import logo from "../logo.svg";
 const endpoint = "https://rickandmortyapi.com/api/character/";
 
 function Article() {
@@ -34,7 +34,14 @@ function Article() {
 	return (
 		<>
 			{article.length > 0 ? (
-				<div>
+				<div className="App">
+					<header className="App-header">
+						<img src={logo} className="App-logo" alt="logo" />
+						<h1> List Chracter rickandmorty</h1>
+					</header>
+					<div className="container">
+						<p className="float-right">Developer nya gabut sorry :v</p>
+					</div>
 					{error && <p>Sorry Cannot Connect!</p>}
 					<div class="d-flex justify-content-center my-2">
 						<button
@@ -51,6 +58,18 @@ function Article() {
 						>
 							Refresh
 						</button>
+						<a
+							href="https://www.instagram.com/rinostyaputra_/"
+							className="text-decoration-none "
+						>
+							<img
+								width={24}
+								height={24}
+								src="https://img.icons8.com/metro/26/000000/instagram.png"
+								alt=""
+							/>
+							<span className="mx-2">Follow ya :v</span>
+						</a>
 					</div>
 					<div className="container">
 						<div class="row">
